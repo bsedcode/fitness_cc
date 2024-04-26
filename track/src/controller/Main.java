@@ -1,4 +1,4 @@
-package track;
+package controller;
 
 public class Main {
 
