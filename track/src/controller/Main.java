@@ -2,6 +2,9 @@ package controller;
 
 import java.util.Scanner;
 
+import model.SportArten;
+import view.IntroView;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -17,11 +20,13 @@ public class Main {
 		System.out.println("Wie groß bist du?");
 		double height=objekt.nextDouble();
 		*/
-		SportArten sport = new SportArten();
-		System.out.println(sport.biking(10, 30));
-		System.out.println(sport.walking(75, 5));
-		System.out.println(sport.football(90, 80));
-		System.out.println(sport.swimming(90, 80));
-		System.out.println(sport.handBall(60, 80));
+//		SportArten sport = new SportArten();
+//		System.out.println(sport.biking(10, 30));
+//		System.out.println(sport.walking(75, 5));
+//		System.out.println(sport.football(90, 80));
+//		System.out.println(sport.swimming(90, 80));
+//		System.out.println(sport.handBall(60, 80));
+		
+		IntroView view = new IntroView();
 	}
 }
