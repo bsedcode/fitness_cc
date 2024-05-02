@@ -2,10 +2,11 @@ package controller;
 
 public class SportArten {
 
+	double calories;
+	
 	public double walking(double weight, double distance) {
 		// verbrauchte energie= strecke(km) * gewicht (kg) * 0.9
 		double calcFactor = 0.9;
-		double calories = 0;
 		calories = distance * weight * calcFactor;
 		return calories;
 	}
@@ -15,7 +16,6 @@ public class SportArten {
 		 * Fußball ( Durchschnittswerte gekoppelt an Spielzeit ) 8kcal / min bei 75kg-90
 		 * kg – Faktor 1 <75kg - Faktor 0.9 > 90kg - Faktor 1.1
 		 */
-		double calories = 0;
 		// factor used for calory calculation depends on body weight
 		double calcfactor = 1;
 		if (weight < 75.0) {
@@ -46,7 +46,6 @@ public class SportArten {
 		int averagespeed = (int) (distance / (time / 60));
 		// calories per minute variable to calculate the return value calories
 		double calcCalories = 0;
-		double calories = 0;
 
 		if (averagespeed <= 15) {
 			calcCalories = 5;
@@ -60,7 +59,7 @@ public class SportArten {
 		if (averagespeed > 22 && averagespeed <= 28) {
 			calcCalories = 14.1;
 		}
-		if (averagespeed > 28) {
+		else {
 			calcCalories = 16.6;
 		}
 		calories = time * calcCalories;
@@ -72,7 +71,6 @@ public class SportArten {
 		 * Handball ( Durchschnittswerte gekoppelt an Spielzeit ) 14kcal / min bei 75kg-90
 		 * kg – Faktor 1 <75kg - Faktor 0.9 > 90kg - Faktor 1.1
 		 */
-		double calories = 0;
 		// factor used for calory calculation depends on body weight
 		double calcfactor = 1;
 		if (weight < 75.0) {
@@ -89,7 +87,6 @@ public class SportArten {
 		 * Schwimmen ( Durchschnittswerte gekoppelt an Spielzeit ) 10kcal / min bei 75kg-90
 		 * kg – Faktor 1 <75kg - Faktor 0.9 > 90kg - Faktor 1.1
 		 */
-		double calories = 0;
 		// factor used for calory calculation depends on body weight
 		double calcfactor = 1;
 		if (weight < 75.0) {
