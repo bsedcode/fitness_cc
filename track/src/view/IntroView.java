@@ -34,7 +34,7 @@ public class IntroView extends JFrame implements ActionListener {
 		
 		
 		//initializing picture path
-		imgPath = "C:\\Users/Bäst/eclipse-workspace2/FitnessTracker/res/img.jpg";
+		imgPath = "res/img.jpg";
 		imgIcon = new ImageIcon(imgPath);
 		Image originalImage = imgIcon.getImage();
 		imgLabel = new JLabel(imgIcon);
