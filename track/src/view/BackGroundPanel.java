@@ -9,11 +9,11 @@ import java.awt.Image;
 import javax.swing.JPanel;
 
 // Helper Class for Background Drawing in Main Menu
-public class BackRoundPanel extends JPanel{
+public class BackGroundPanel extends JPanel{
 	
 	private Image backgroundImage;
 	
-	public BackRoundPanel(Image backgroundImage) {
+	public BackGroundPanel(Image backgroundImage) {
 		this.backgroundImage = backgroundImage;
 		setLayout(new BorderLayout());	
 	}

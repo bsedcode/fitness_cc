@@ -18,7 +18,7 @@ public class TestViewIntro extends JFrame{
 	JLabel gameTitleLbl;
 	JPanel backgroundPanel, buttonPanel;
 	JButton newGameBtn, loadGameBtn, closeGameBtn;
-	String introImgPath = "res/img.jpg";
+	String introImgPath = "res/hintergrundTracker.jpg";
 	ImageIcon introImgIcon;
 	Font gameFont;
 	
@@ -29,14 +29,14 @@ public class TestViewIntro extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// create background Panel
-		backgroundPanel = new BackRoundPanel(new ImageIcon(introImgPath).getImage());
+		backgroundPanel = new BackGroundPanel(new ImageIcon(introImgPath).getImage());
 		backgroundPanel.setLayout(new BorderLayout());
 		
 		// create JLabel for the Game Title
 		gameFont = new Font("Old English Text MT", Font.BOLD, 64);
 		gameTitleLbl = new JLabel("Fitness Tracker Demo", SwingConstants.CENTER);
 		gameTitleLbl.setFont(gameFont);
-		gameTitleLbl.setForeground(new Color(245, 245, 220));
+		gameTitleLbl.setForeground(new Color(0, 0, 0));
 		
 		// button panel for better Alignment
 		buttonPanel = new JPanel(new FlowLayout());
