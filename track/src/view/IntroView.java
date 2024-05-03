@@ -44,9 +44,9 @@ public class IntroView extends JFrame implements ActionListener {
 		introText = new JTextField();
 		startAppBtn = new JButton("Weiter");
 		
-		
+		//dimensions
 		mainPanel = new JPanel();
-//		mainPanel.setLayout(new BorderLayout());
+		mainPanel.setLayout(new BorderLayout());
 //		topPanel = new JPanel();
 //		topPanel.setLayout(new BorderLayout());
 //		botPanel = new JPanel();
