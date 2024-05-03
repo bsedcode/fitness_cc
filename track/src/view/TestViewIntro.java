@@ -18,7 +18,7 @@ public class TestViewIntro extends JFrame{
 	JLabel gameTitleLbl;
 	JPanel backgroundPanel, buttonPanel;
 	JButton newGameBtn, loadGameBtn, closeGameBtn;
-	String introImgPath = "res/hintergrundTracker.jpg";
+	String introImgPath = "res/fitnessTracker.jpg";
 	ImageIcon introImgIcon;
 	Font gameFont;
 	
