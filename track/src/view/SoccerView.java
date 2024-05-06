@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 
 public class SoccerView {
 	
-	String introImgPath = "res/fitnessTracker.jpg";
+	String introImgPath = "res/FussballHintergrund.jpg";
 	ImageIcon introImgIcon;
 	
 	public SoccerView() {
@@ -20,7 +20,7 @@ public class SoccerView {
 		//Frame initiation
 		JFrame frame = new JFrame("*Generic FitnessTrackerName* - Verbrannte Kalorien Fußball");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(800, 500);
+		frame.setSize(1920, 1080);
 		
 		// main Panel gets filled into the Frame
 		JPanel panel = new JPanel();

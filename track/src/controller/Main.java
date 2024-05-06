@@ -5,6 +5,7 @@ import java.util.Scanner;
 import model.SportArten;
 import view.CalculationView;
 import view.IntroView;
+import view.SoccerView;
 import view.TestViewIntro;
 
 public class Main {
@@ -28,7 +29,7 @@ public class Main {
 //		System.out.println(sport.swimming(90, 80));
 //		System.out.println(sport.handBall(60, 80));
 		
-
-		//TestViewIntro testviewdemo = new TestViewIntro ();
+		//SoccerView soccerviewdemo = new SoccerView();
+		TestViewIntro testviewdemo = new TestViewIntro ();
 	}
 }
