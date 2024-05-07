@@ -29,7 +29,7 @@ public class Main {
 //		System.out.println(sport.swimming(90, 80));
 //		System.out.println(sport.handBall(60, 80));
 		
-		//SoccerView soccerviewdemo = new SoccerView();
+		// SoccerView soccerviewdemo = new SoccerView();
 		TestViewIntro testviewdemo = new TestViewIntro ();
 	}
 }

@@ -21,7 +21,7 @@ public class SoccerView {
 		JFrame frame = new JFrame("*Generic FitnessTrackerName* - Verbrannte Kalorien Fußball");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1366, 768);
-		
+	
 		// main Panel gets filled into the Frame
 		JPanel panel = new JPanel();
 		panel = new BackGroundPanel(new ImageIcon(introImgPath).getImage());
