@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class WalkingView {
-	String introImgPath = "res/FussballHintergrund.jpg";
+	String introImgPath = "res/Walking.jpg";
 	ImageIcon introImgIcon;
 	
 	public WalkingView() {

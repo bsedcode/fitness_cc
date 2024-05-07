@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 
 public class BikingView {
 	
-	String introImgPath = "res/FussballHintergrund.jpg";
+	String introImgPath = "res/Radfahren.jpg";
 	ImageIcon introImgIcon;
 	
 	public BikingView() {
