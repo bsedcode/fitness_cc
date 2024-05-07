@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import controller.MainMenuController;
 
 public class IntroView extends JFrame implements ActionListener {
 
@@ -43,6 +44,7 @@ public class IntroView extends JFrame implements ActionListener {
 
 		introText = new JTextField();
 		startAppBtn = new JButton("Weiter");
+		startAppBtn.addActionListener(this);
 		
 		//dimensions
 		mainPanel = new JPanel();
@@ -60,8 +62,8 @@ public class IntroView extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("wir habens geschafft!");
-
+		MainMenuController calcController = new MainMenuController();
+		dispose();
 	}
 
 }
