@@ -6,6 +6,7 @@ import model.SportArten;
 import view.CalculationView;
 import view.IntroView;
 import view.SoccerView;
+import view.SwimView;
 import view.TestViewIntro;
 
 public class Main {
@@ -30,6 +31,9 @@ public class Main {
 //		System.out.println(sport.handBall(60, 80));
 		
 		// SoccerView soccerviewdemo = new SoccerView();
-		TestViewIntro testviewdemo = new TestViewIntro ();
+		// TestViewIntro testviewdemo = new TestViewIntro ();
+		
+		SwimView swimviewdemo = new SwimView();
+		
 	}
 }
