@@ -28,7 +28,7 @@ public class IntroView extends JFrame implements ActionListener {
 
 	public IntroView() {
 		setTitle("Java Tracker Demo");
-		setSize(1920, 1080);
+		setSize(1366, 768);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
