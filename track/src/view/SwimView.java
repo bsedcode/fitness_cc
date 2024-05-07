@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 public class SwimView {
 	String introImgPath = "res/schwimmenHintergrund.jpg";
 	ImageIcon introImgIcon;
+	 
 	
 	public SwimView() {
 		
