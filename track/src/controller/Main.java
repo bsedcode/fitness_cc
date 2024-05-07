@@ -3,7 +3,7 @@ package controller;
 import java.util.Scanner;
 
 import model.SportArten;
-import view.CalculationView;
+import view.MainMenuView;
 import view.IntroView;
 import view.SoccerView;
 import view.SwimView;
@@ -33,7 +33,12 @@ public class Main {
 		// SoccerView soccerviewdemo = new SoccerView();
 		// TestViewIntro testviewdemo = new TestViewIntro ();
 		
-		SwimView swimviewdemo = new SwimView();
-		
+		//SwimView swimviewdemo = new SwimView();
+		Main main = new Main();
+		main.startGame();
+		//CalculationView test = new CalculationView();
+	}
+	public void startGame() {
+		IntroController game = new IntroController();
 	}
 }
