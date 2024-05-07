@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class HandballView {
-	String introImgPath = "res/FussballHintergrund.jpg";
+	String introImgPath = "res/Handball.jpg";
 	ImageIcon introImgIcon;
 	
 	public HandballView() {
