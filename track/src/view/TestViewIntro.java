@@ -25,7 +25,7 @@ public class TestViewIntro extends JFrame{
 	
 	public TestViewIntro() {
 		
-		setTitle("Fitness Tracker Demo");
+		setTitle("*Generic Fitness Tracker* - Intro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// create background Panel

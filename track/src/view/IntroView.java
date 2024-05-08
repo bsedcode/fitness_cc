@@ -28,9 +28,10 @@ public class IntroView extends JFrame implements ActionListener {
 	private JPanel mainPanel, topPanel, botPanel;
 
 	public IntroView() {
-		setTitle("Java Tracker Demo");
+		setTitle("*Generic Fitness Tracker* Welcome");
 		setSize(1366, 768);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 		
 		
 		
