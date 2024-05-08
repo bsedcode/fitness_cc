@@ -2,6 +2,8 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -9,18 +11,27 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
+
+import controller.MainMenuController;
+import controller.SoccerController;
 
 public class SoccerView {
 	
 	String introImgPath = "res/FussballHintergrund.jpg";
 	ImageIcon introImgIcon;
+	int resultBikingCalories;
+	JTextField timeInput;
+	JTextField weightInput;
 	
-	public SoccerView() {
+	public SoccerView(int burnedCalories) {
+		resultBikingCalories=burnedCalories;
 		
 		//Frame initiation
 		JFrame frame = new JFrame("*Generic FitnessTrackerName* - Verbrannte Kalorien Fußball");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1366, 768);
+		frame.setLocationRelativeTo(null);
 	
 		// main Panel gets filled into the Frame
 		JPanel panel = new JPanel();
@@ -28,28 +39,66 @@ public class SoccerView {
 		panel.setLayout(new BorderLayout());
 		
 
-		//Instruction for the user
-		JLabel weightInstruc = new JLabel("Gewicht bei Trainingsbeginn: ");
+		//Instruction for the user weight
+		JLabel weightInstruc = new JLabel("Gewicht bei Trainingsbeginn (in Kilogramm): ");
+		
+		//Instruction for the user Time
+		JLabel timeInstruc = new JLabel("Dauer des Trainings (in Minuten): ");
 		
 		//Button to calculate
 		JButton calcBtn = new JButton("Berechne");
+		calcBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int time = Integer.parseInt(timeInput.getText());
+				int weight=Integer.parseInt(weightInput.getText());
+				SoccerController soccerController=new SoccerController(time,weight);
+				frame.dispose();
+			}
+		});
+		
+		
+		//Button to trace back to Mainmenu
+		JButton menuBtn = new JButton("Hauptmenu");
+		menuBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				MainMenuController mainMenuController = new MainMenuController();
+				frame.dispose();
+			}
+		});
 		
 		//Textfield for input weight
-		JTextField weightInput = new JTextField(8);
+		weightInput = new JTextField(8);
+		
+		//texfield for input time
+		timeInput = new JTextField(8);
 		
 		//Label that shows the calculated calories
-		JLabel resultCalc = new JLabel ("result");
+		JLabel resultCalc = new JLabel ("Verbrannte Kalorien: " + resultBikingCalories);
 		
-		//Initiliaze Helppanel 
-		JPanel helpPanel = new JPanel();
-		helpPanel.setLayout(new FlowLayout());
+		//Initiliaze Helppanel Filled with the Instructions and Textfields
+		JPanel helpPanelInstr = new JPanel(new FlowLayout());		
+		helpPanelInstr.add(weightInstruc);
+		helpPanelInstr.add(weightInput);
+		helpPanelInstr.add(timeInstruc);
+		helpPanelInstr.add(timeInput);
+
 		
-		helpPanel.add(weightInstruc);
-		helpPanel.add(weightInput);
-		helpPanel.add(calcBtn);
-		helpPanel.add(resultCalc);
+		//initializing Helppanel filled with Buttons
+		JPanel helpPanelBtn = new JPanel(new FlowLayout());
+		helpPanelBtn.add(menuBtn);
+		helpPanelBtn.add(calcBtn);
+		helpPanelBtn.add(resultCalc);
 		
-		panel.add(helpPanel, BorderLayout.SOUTH);
+		//initialize fillpanel getting filled with both helppanels and gets filled into the main panel
+		JPanel fillPanel = new JPanel(new BorderLayout());
+		fillPanel.add(helpPanelInstr, BorderLayout.NORTH);
+		fillPanel.add(helpPanelBtn, BorderLayout.SOUTH);
+		
+		panel.add(fillPanel, BorderLayout.SOUTH);
 		frame.add(panel);
 		
 		

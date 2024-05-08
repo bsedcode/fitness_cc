@@ -31,6 +31,7 @@ public class SwimView {
 		frame = new JFrame("*Generic FitnessTrackerName* - Verbrannte Kalorien beim Schwimmen");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1366, 768);
+		frame.setLocationRelativeTo(null);
 	
 		// main Panel gets filled into the Frame
 		panel = new JPanel();

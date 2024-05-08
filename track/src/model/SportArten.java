@@ -25,7 +25,7 @@ public class SportArten {
 			calcfactor = 1.1;
 		}
 		calories = time * 8 * calcfactor;
-		return calories;
+		return (int)calories;
 	}
 
 //	Radfahren ( gekoppelt an Strecke und Geschwindigkeit )
@@ -42,21 +42,26 @@ public class SportArten {
 //	Geschwindigkeit bis 22 km/h ≈ 10 kcal
 //	Geschwindigkeit bis 28 km/h ≈ 14.1 kcal
 //Geschwindigkeit über 28 km/h ≈ 16.6 kcal
+	
+	//Distance in km and time in minutes
 	public double biking(double distance, double time) {
-		int averagespeed = (int) (distance / (time / 60));
+		int timeCalc= (int) time;
+		int distanceCalc= (int) distance;
+		int averagespeed = (int) (distanceCalc / (timeCalc / 60));
+		
 		// calories per minute variable to calculate the return value calories
 		double calcCalories = 0;
 
 		if (averagespeed <= 15) {
 			calcCalories = 5;
 		}
-		if (averagespeed > 15 && averagespeed <= 18) {
+		else if (averagespeed > 15 && averagespeed <= 18) {
 			calcCalories = 7;
 		}
-		if (averagespeed > 18 && averagespeed <= 22) {
+		else if (averagespeed > 18 && averagespeed <= 22) {
 			calcCalories = 10;
 		}
-		if (averagespeed > 22 && averagespeed <= 28) {
+		else if (averagespeed > 22 && averagespeed <= 28) {
 			calcCalories = 14.1;
 		}
 		else {
@@ -64,7 +69,7 @@ public class SportArten {
 		}
 		calories = time * calcCalories;
 
-		return calories;
+		return (int)calories;
 	}
 	public double handBall(int time, double weight) {
 		/*

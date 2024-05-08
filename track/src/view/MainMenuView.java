@@ -30,9 +30,10 @@ public class MainMenuView {
 	public MainMenuView() {
 
 		// Frame initiation
-		frame = new JFrame("Kalorien Berechnung");
+		frame = new JFrame("*Generic FitnessTrackerName* Hauptmenu");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(800, 500);
+		frame.setSize(1366, 768);
+		frame.setLocationRelativeTo(null);
 
 		// main Panel gets filled into the Frame
 		panel = new JPanel();
@@ -66,7 +67,7 @@ public class MainMenuView {
 					frame.dispose();
 				}
 				else if(disciplineTxt.equals("Fahrrad fahren")) {
-					BikingView bikingView = new BikingView();
+					BikingView bikingView = new BikingView(0);
 					frame.dispose();
 				}
 				else if(disciplineTxt.equals("Handball")) {
@@ -74,7 +75,7 @@ public class MainMenuView {
 					frame.dispose();
 				}
 				else if(disciplineTxt.equals("Fußball")) {
-					SoccerView soccerView = new SoccerView();
+					SoccerView soccerView = new SoccerView(0);
 					frame.dispose();
 				}
 				else if(disciplineTxt.equals("Laufen")) {
