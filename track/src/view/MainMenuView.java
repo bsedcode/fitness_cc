@@ -25,6 +25,8 @@ public class MainMenuView {
 	private JLabel calcLbl;
 	private JPanel calcPanel;
 	private JButton startCalcBtn;
+	private JPanel helpPanel;
+
 
 
 	public MainMenuView() {
@@ -44,7 +46,7 @@ public class MainMenuView {
 		calcPanel = new JPanel();
 
 		// helppanel which gets filled by the calcPanel and textPanel
-		JPanel helpPanel = new JPanel();
+		helpPanel = new JPanel();
 		helpPanel.setLayout(new BorderLayout());
 
 		// Written Text in the program
