@@ -23,30 +23,40 @@ public class SoccerView {
 	private int resultBikingCalories;
 	private JTextField timeInput;
 	private JTextField weightInput;
+	private JFrame frame;
+	private JPanel panel;
+	private JLabel weightInstruc;
+	private JLabel timeInstruc;
+	private JButton calcBtn;
+	private JButton menuBtn;
+	private JLabel resultCalc;
+	private JPanel helpPanelInstr;
+	private JPanel helpPanelBtn;
+	private JPanel fillPanel;		
 	
 	public SoccerView(int burnedCalories) {
 		resultBikingCalories=burnedCalories;
 		
 		//Frame initiation
-		JFrame frame = new JFrame("*Generic FitnessTrackerName* - Verbrannte Kalorien Fußball");
+		frame = new JFrame("*Generic FitnessTrackerName* - Verbrannte Kalorien Fußball");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1366, 768);
 		frame.setLocationRelativeTo(null);
 	
 		// main Panel gets filled into the Frame
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel = new BackGroundPanel(new ImageIcon(introImgPath).getImage());
 		panel.setLayout(new BorderLayout());
 		
 
 		//Instruction for the user weight
-		JLabel weightInstruc = new JLabel("Gewicht bei Trainingsbeginn (in Kilogramm): ");
+		weightInstruc = new JLabel("Gewicht bei Trainingsbeginn (in Kilogramm): ");
 		
 		//Instruction for the user Time
-		JLabel timeInstruc = new JLabel("Dauer des Trainings (in Minuten): ");
+		timeInstruc = new JLabel("Dauer des Trainings (in Minuten): ");
 		
 		//Button to calculate
-		JButton calcBtn = new JButton("Berechne");
+		calcBtn = new JButton("Berechne");
 		calcBtn.addActionListener(new ActionListener() {
 			
 			@Override
@@ -60,7 +70,7 @@ public class SoccerView {
 		
 		
 		//Button to trace back to Mainmenu
-		JButton menuBtn = new JButton("Hauptmenu");
+		menuBtn = new JButton("Hauptmenu");
 		menuBtn.addActionListener(new ActionListener() {
 			
 			@Override
@@ -77,10 +87,10 @@ public class SoccerView {
 		timeInput = new JTextField(8);
 		
 		//Label that shows the calculated calories
-		JLabel resultCalc = new JLabel ("Verbrannte Kalorien: " + resultBikingCalories);
+		resultCalc = new JLabel ("Verbrannte Kalorien: " + resultBikingCalories);
 		
 		//Initiliaze Helppanel Filled with the Instructions and Textfields
-		JPanel helpPanelInstr = new JPanel(new FlowLayout());		
+		helpPanelInstr = new JPanel(new FlowLayout());		
 		helpPanelInstr.add(weightInstruc);
 		helpPanelInstr.add(weightInput);
 		helpPanelInstr.add(timeInstruc);
@@ -88,13 +98,13 @@ public class SoccerView {
 
 		
 		//initializing Helppanel filled with Buttons
-		JPanel helpPanelBtn = new JPanel(new FlowLayout());
+		helpPanelBtn = new JPanel(new FlowLayout());
 		helpPanelBtn.add(menuBtn);
 		helpPanelBtn.add(calcBtn);
 		helpPanelBtn.add(resultCalc);
 		
 		//initialize fillpanel getting filled with both helppanels and gets filled into the main panel
-		JPanel fillPanel = new JPanel(new BorderLayout());
+		fillPanel = new JPanel(new BorderLayout());
 		fillPanel.add(helpPanelInstr, BorderLayout.NORTH);
 		fillPanel.add(helpPanelBtn, BorderLayout.SOUTH);
 		
