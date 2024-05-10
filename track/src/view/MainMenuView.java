@@ -17,14 +17,14 @@ import controller.MainMenuController;
 
 public class MainMenuView {
 
-	String introImgPath = "res/fitnessTracker.jpg";
-	ImageIcon introImgIcon;
-	JComboBox<String> sportDiscipl;
-	JPanel panel;
-	JFrame frame;
-	JLabel calcLbl;
-	JPanel calcPanel;
-	JButton startCalcBtn;
+	private String introImgPath = "res/fitnessTracker.jpg";
+	private ImageIcon introImgIcon;
+	private JComboBox<String> sportDiscipl;
+	private JPanel panel;
+	private JFrame frame;
+	private JLabel calcLbl;
+	private JPanel calcPanel;
+	private JButton startCalcBtn;
 
 
 	public MainMenuView() {

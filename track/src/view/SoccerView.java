@@ -18,11 +18,11 @@ import controller.SoccerController;
 
 public class SoccerView {
 	
-	String introImgPath = "res/FussballHintergrund.jpg";
-	ImageIcon introImgIcon;
-	int resultBikingCalories;
-	JTextField timeInput;
-	JTextField weightInput;
+	private String introImgPath = "res/FussballHintergrund.jpg";
+	private ImageIcon introImgIcon;
+	private int resultBikingCalories;
+	private JTextField timeInput;
+	private JTextField weightInput;
 	
 	public SoccerView(int burnedCalories) {
 		resultBikingCalories=burnedCalories;
