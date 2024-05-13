@@ -6,10 +6,10 @@ public class WalkingController {
 
 	}
 
-	public int calculateWalking(int weight, int distance, int time, String metTxt) {
+	public int calculateWalking(int weight, double distance, int time, String metTxt) {
 		double calories;
 		int calcFact = 0;
-		int calcDistance = distance;
+		double calcDistance = distance;
 		int calcWeight = weight;
 		double calcTime = time / 60.0;
 		String metCompareTxt = metTxt;

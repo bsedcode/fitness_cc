@@ -72,7 +72,7 @@ public class WalkingView {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				int calcDistance=Integer.parseInt(distanceInput.getText());;
+				double calcDistance=Double.parseDouble(distanceInput.getText());;
 				int calcWeight=Integer.parseInt(weightInput.getText());;
 				int calcTime=Integer.parseInt(timeInput.getText());;
 				int calcCalories;
